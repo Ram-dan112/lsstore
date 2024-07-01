@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BERANDA TOKO</title>
+<style>
+    /* Reset CSS */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Global Styles */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        background-color: #ffffff; /* Warna latar belakang yang elegan */
+        color: #000000;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    header {
+        background-color: #ff9cde;
+        box-shadow: 0 2px 4px #ffffff;
+        padding: 10px 0;
+    }
+
+    header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header nav {
+        text-align: right;
+    }
+
+    header nav ul {
+        list-style: none;
+    }
+
+    header nav ul li {
+        display: inline-block;
+        margin-left: 20px;
+    }
+
+    header nav ul li a {
+        text-decoration: none;
+        color: #000000;
+        font-size: 1.2em;
+        transition: color 0.3s;
+    }
+
+    header nav ul li a:hover {
+        color: #ffffff;
+    }
+
+    .hero {
+        background-image: url('https://scontent.fcgk24-1.fna.fbcdn.net/v/t39.30808-6/448763480_1840345693117675_9003396409764472594_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=f727a1&_nc_eui2=AeFrlGBuXpFE7_8QTpuQCEe7494GIMhWhKzj3gYgyFaErB9ne_hrhfgAztkLAB8X1ESey2uN6UN3h6REvWwP5ItP&_nc_ohc=ylEAWLmxm4YQ7kNvgEXw-IT&_nc_zt=23&_nc_ht=scontent.fcgk24-1.fna&oh=00_AYBiQkWt6hguS-u_c8qL4lE-yY9VzLNHiXpJAlSnmq5Whw&oe=66874604'); /* Ganti 'path/to/your/image.jpg' dengan path ke gambar Anda */
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 2px 4px rgb(255, 254, 254);
+    padding: 10px 0;;
+    }
+
+    .hero h2 {
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+
+    .hero .btn {
+        display: inline-block;
+        background-color: #ffdfdf;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    
+        
+   
+
+    .features {
+        background-color: #ffffff;
+        padding: 80px 0;
+        text-align: center;
+    }
+
+    .feature {
+        margin-bottom: 40px;
+        
+    }
+
+    .feature img {
+        max-width: 100px;
+        margin-bottom: 20px;
+    }
+
+    .feature h3 {
+        font-size: 2em;
+        margin-bottom: 10px;
+        
+    }
+
+    
+    .feature p {
+        font-size: 1.1em;
+        color: #000000;
+        
+    }
+
+    .portfolio {
+            background-color: #f9f9f9;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .portfolio h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-items {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            margin-top: 40px;
+        }
+
+        .portfolio-item {
+            width: 300px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .portfolio-item img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+    .testimonials {
+        background-color: #f9f9f9;
+        padding: 80px 0;
+        text-align: center;
+        
+    }
+
+    .testimonial {
+        margin-bottom: 40px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    .testimonial p {
+        font-style: italic;
+        color: #888;
+        font-size: 1.1em;
+        margin-top: 10px;
+    }
+
+    .testimonial .author {
+        margin-top: 20px;
+        font-weight: bold;
+    }
+    .btn {
+        display: inline-block;
+        background-color: #000000;
+        color: #ffffff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+        margin-top: 10px;
+    }
+
+    .btn:hover {
+        background-color: #006b0e; /* Warna latar belakang tombol saat hover */
+        color: #fff; /* Warna teks tombol saat hover */
+    }
+
+    footer {
+        background-color: #ff9cde;
+        color: #000000;
+        text-align: center;
+        padding: 20px 0;
+        position: relative;
+        clear: both;
+        margin-top: 40px;
+    }
+
+    footer p {
+        margin-bottom: 10px;
+    }
+
+    footer .social-icons {
+        margin-top: 20px;
+    }
+
+    footer .social-icons a {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    footer .social-icons img {
+        width: 30px;
+        height: 30px;
+    }
+
+    @media (max-width: 768px) {
+        header .container {
+            flex-direction: column;
+        }
+        header nav {
+            margin-top: 20px;
+            text-align: center;
+        }
+        header nav ul li {
+            display: block;
+            margin: 10px 0;
+        }
+        .hero h2 {
+            font-size: 2.5em;
+        }
+        .hero p {
+            font-size: 1em;
+        }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>LS GROUP</h1>
+        <nav>
+            <ul>
+                <li><a href="C:\Users\MANCUY\Desktop\LATIHAN\index.html">Kembali</a></li>
+                <li><a href="#">Tentang</a></li>
+                
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h2> SELAMAT BERBELANJA</h2>
+        <p>Temukan berbagai produk terbaik kami</p>
+        
+    </div>
+</section>
+
+
+<section class="portfolio">
+    <div class="container">
+        <h1>SILAHKAN DI PILIH SESUAI KEINGAN DAN KEBUTUHAN KAMU</h1>
+        <div class="portfolio-items">
+            <div class="portfolio-item">
+                <img src="https://gallery.poskota.co.id/storage/Foto/images-(4)_copy_1024x679.jpeg" alt="Project 1">
+                <h3>Ls Shop</h3>
+                
+                <a href="#" class="btn">Lihat Produk Kami</a>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://edura.unj.ac.id/edura-news/wp-content/uploads/2020/07/post2020072902edrnws.jpg" alt="Project 2">
+                <h3>Ls Percetakan</h3>
+              
+                <a href="#" class="btn">Lihat Produk Kami</a>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://www.shutterstock.com/image-vector/hand-hold-smartphone-600nw-791099623.jpg" alt="Project 3">
+                <h3>Ls Celullar</h3>
+               
+                <a href="#" class="btn">Lihat Produk Kami</a>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://dasphotostudio.com/images/icon/img_4LkPq1X.jpg" alt="Project 3">
+                <h3>LS STUDIO</h3>
+               
+                <a href="#" class="btn">Price list</a>
+            </div>
+          
+        </div>
+    </div>
+</section>
+
+<section>
+    <section class="contact">
+        <div class="container">
+            <h2>Ingin Memesan?</h2>
+            <p>Silakan hubungi kami untuk informasi lebih lanjut atau untuk memesan produk dan layanan kami.</p>
+            <a href="C:\Users\MANCUY\Desktop\LATIHAN\BERANDA\pricelust\index.html" class="btn">Pesan Sekarang</a>
+        </div>
+    </section>
+</section>
+
+<section class="testimonials">
+    <div class="container">
+        <div class="testimonial">
+            <p>PEMBELIAN LOKASI JAUH KITA AKAN MENGGUNAKAN JASA KURIR ONGKIR DI TANGGUNG PEMBELI</p>
+            
+        </div>
+        <div class="testimonial">
+            <p>BARANG DATANG HARUS DI AMBIL APABILA PEMBELIAN BARANG PREE ORDER "PESAN DULU"</p>
+            
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Toko Anda. All rights reserved.</p>
+        <div class="container">
+            <div class="social-icons">
+                <!-- Ganti dengan logo sosial media dan link yang sesuai -->
+                <a href="https://web.facebook.com/lenyseptyana09" target="_blank"><img src="https://cdn.icon-icons.com/icons2/2566/PNG/512/facebook_icon_153518.png"  width="30" height="30"></a>
+                <a href="https://www.tiktok.com/@leniseptiana24?lang=id-ID" target="_blank"><img src="https://static-00.iconduck.com/assets.00/tiktok-icon-891x1024-ozp1clb4.png"  width="30" height="30"></a>
+                <a href="https://www.instagram.com/leniiiiiii24/" target="_blank"><img src="https://www.svgrepo.com/show/364604/instagram-logo-fill.svg"  width="30" height="30"></a>
+                <!-- Dan lain-lain -->
+            </div>
+    </div>
+</footer>
+<script>// Menangkap elemen teks pada hero
+const heroText = document.querySelector('.hero h2');
+
+// Menangkap posisi scroll terakhir
+let lastScrollTop = 0;
+
+// Event listener ketika halaman di-scroll
+window.addEventListener('scroll', function() {
+    // Menghitung jumlah scroll dari atas halaman
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    // Menghitung perbedaan scroll sebelumnya dengan scroll sekarang
+    let scrollAmount = scrollTop - lastScrollTop;
+
+    // Mengubah posisi teks berdasarkan arah scroll
+    heroText.style.transform = `translateY(-${scrollTop / 2}px)`;
+
+    // Memperbarui posisi scroll terakhir
+    lastScrollTop = scrollTop;
+});
+</script>
+</body>
+</html>
